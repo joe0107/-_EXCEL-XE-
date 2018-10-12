@@ -1,0 +1,15 @@
+﻿[Main]
+Version=2
+
+[EditDoc: TcxPropertiesStoreComponent]
+=
+Text="C:\\Projects\\TCRM-GROUP\\#工具程式\\客戶名單套印_EXCEL(XE)\\報價單.xlsx"
+
+[EditOutputFolder: TcxPropertiesStoreComponent]
+=
+Text="D:\\Temp\\南區報價單套印_20181012"
+
+[EditSrc: TcxPropertiesStoreComponent]
+=
+Text="C:\\Projects\\TCRM-GROUP\\#工具程式\\客戶名單套印_EXCEL(XE)\\報價單名單.xls"
+
