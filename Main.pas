@@ -26,6 +26,7 @@ type
   private
     FCol_CustNo: Integer;
     FCol_CustName: Integer;
+    FCol_CustFullName: Integer;
     FCol_TaxNo: Integer;
     FCol_Contact: Integer;
     FCol_Addr: Integer;
@@ -92,6 +93,7 @@ procedure TfmMain.ClearNdx_XLS_COL;
 begin
   FCol_CustNo := -1;
   FCol_CustName := -1;
+  FCol_CustFullName := -1;
   FCol_TaxNo := -1;
   FCol_Contact := -1;
   FCol_Addr := -1;
@@ -167,6 +169,8 @@ begin
   MergeData('<<客戶代號>>', FCol_CustNo);
   //置換[客戶名稱]
   MergeData('<<客戶名稱>>', FCol_CustName);
+  //置換[客戶全稱]
+  MergeData('<<客戶全稱>>', FCol_CustFullName);
   //置換[統一編號]
   MergeData('<<統一編號>>', FCol_TaxNo);
   //置換[聯絡人]
@@ -235,6 +239,8 @@ begin
         FCol_CustNo := i
       else if (aText = '客戶名稱') then
         FCol_CustName := i
+      else if (aText = '客戶全稱') then
+        FCol_CustFullName := i
       else if (aText = '統一編號') then
         FCol_TaxNo := i
       else if (aText = '聯絡人') then
