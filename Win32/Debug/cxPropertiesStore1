@@ -3,13 +3,13 @@ Version=2
 
 [EditDoc: TcxPropertiesStoreComponent]
 =
-Text="C:\\Projects\\TCRM-GROUP\\#工具程式\\客戶名單套印_EXCEL(XE)\\報價單.xlsx"
+Text="D:\\Temp\\中區報價單套印\\5_數位憑證報價單1025_9折-1018.xlsx"
 
 [EditOutputFolder: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\南區報價單套印_20181012"
+Text="D:\\Temp\\中區報價單套印\\DOC"
 
 [EditSrc: TcxPropertiesStoreComponent]
 =
-Text="C:\\Projects\\TCRM-GROUP\\#工具程式\\客戶名單套印_EXCEL(XE)\\報價單名單.xls"
+Text="D:\\Temp\\中區報價單套印\\20181025_問卷_報價單名單.xls"
 

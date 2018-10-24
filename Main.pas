@@ -237,17 +237,17 @@ begin
 
       if (aText = '客戶代號') then
         FCol_CustNo := i
-      else if (aText = '客戶名稱') then
+      else if (aText = '客戶名稱') or (aText = '公司名稱') then
         FCol_CustName := i
-      else if (aText = '客戶全稱') then
+      else if (aText = '客戶全稱') or (aText = '公司名稱') then
         FCol_CustFullName := i
       else if (aText = '統一編號') then
         FCol_TaxNo := i
-      else if (aText = '聯絡人') then
+      else if (aText = '聯絡人') or (aText = '連絡人') then
         FCol_Contact := i
-      else if (aText = '地址') then
+      else if (aText = '地址') or (aText = '公司地址') then
         FCol_Addr := i
-      else if (aText = '電話') or (aText = '聯絡電話') then
+      else if (aText = '電話') or (aText = '聯絡電話') or (aText = '連絡電話') then
         FCol_CustPhone := i
       else if (aText = '傳真') then
         FCol_CustFax := i
