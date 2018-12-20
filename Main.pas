@@ -19,10 +19,13 @@ type
     ProgressBar1: TProgressBar;
     XLSReadWriteII5: TXLSReadWriteII5;
     cxPropertiesStore1: TcxPropertiesStore;
+    Label1: TLabel;
+    DateTimePicker_Assign: TDateTimePicker;
     procedure btnSrcClick(Sender: TObject);
     procedure btnDocClick(Sender: TObject);
     procedure btnOuputClick(Sender: TObject);
     procedure btnExecClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FCol_CustNo: Integer;
     FCol_CustName: Integer;
@@ -131,6 +134,11 @@ begin
   end;
 end;
 
+procedure TfmMain.FormCreate(Sender: TObject);
+begin
+  DateTimePicker_Assign.Date := Date;
+end;
+
 function TfmMain.GetCustNo(ASheet: TXLSWorksheet; ASrcRow: Integer): string;
 begin
   if (FCol_CustNo <>-1) then
@@ -186,10 +194,17 @@ begin
   MergeData('<<訓練師>>', FCol_TE);
   //置換[今天日期]
   AExcelApp.Cells.Replace('<<今天日期>>', FormatDateTime('YYYY.MM.DD', Date), xlPart, xlByRows, False, False);
+  //置換[指定日期]
+  AExcelApp.Cells.Replace('<<指定日期>>', FormatDateTime('YYYY.MM.DD', DateTimePicker_Assign.Date), xlPart, xlByRows, False, False);
   //置換[年月日流水號]
   aDate := EncodeDate(2018, 10, 15);
   aText := '''' + FormatDateTime('YYYYMMDD', aDate) + StrPadLeft(IntToStr(FDocNdx), 3, '0');
   AExcelApp.Cells.Replace('<<年月日流水號>>', aText, xlPart, xlByRows, False, False);
+  AExcelApp.Cells.Replace('<<今天日期流水號>>', aText, xlPart, xlByRows, False, False);
+  //置換[指定年月日流水號]
+  aDate := DateTimePicker_Assign.Date;
+  aText := '''' + FormatDateTime('YYYYMMDD', aDate) + StrPadLeft(IntToStr(FDocNdx), 3, '0');
+  AExcelApp.Cells.Replace('<<指定日期流水號>>', aText, xlPart, xlByRows, False, False);
 end;
 
 procedure TfmMain.MergeDoc(ASheet: TXLSWorksheet; ASrcRow: Integer; ASrcFileName, ADstFileName: string);

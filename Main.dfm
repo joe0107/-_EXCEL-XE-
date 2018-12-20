@@ -14,8 +14,16 @@ object fmMain: TfmMain
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
+  object Label1: TLabel
+    Left = 257
+    Top = 241
+    Width = 60
+    Height = 19
+    Caption = #25351#23450#26085#26399
+  end
   object EditSrc: TEdit
     Left = 8
     Top = 42
@@ -80,6 +88,15 @@ object fmMain: TfmMain
     Height = 29
     Step = 1
     TabOrder = 7
+  end
+  object DateTimePicker_Assign: TDateTimePicker
+    Left = 330
+    Top = 237
+    Width = 121
+    Height = 27
+    Date = 43454.396880104170000000
+    Time = 43454.396880104170000000
+    TabOrder = 8
   end
   object cxShellBrowserDialog1: TcxShellBrowserDialog
     FolderLabelCaption = #36984#25799#35201#25918#32622#30003#35531#25991#20214#30340#36039#26009#22846

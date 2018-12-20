@@ -3,13 +3,13 @@ Version=2
 
 [EditDoc: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\中區報價單套印\\5_數位憑證報價單1025_9折-1018.xlsx"
+Text="D:\\Temp\\9\\3_報價單(依客戶單獨列印).xlsx"
 
 [EditOutputFolder: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\中區報價單套印\\DOC"
+Text="D:\\Temp\\9\\DOC"
 
 [EditSrc: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\中區報價單套印\\20181025_問卷_報價單名單.xls"
+Text="D:\\Temp\\9\\4_電訪名單_201807A_下半年保固客戶關懷電訪.xls"
 
