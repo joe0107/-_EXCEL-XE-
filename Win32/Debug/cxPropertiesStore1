@@ -3,13 +3,13 @@ Version=2
 
 [EditDoc: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\9\\3_報價單(依客戶單獨列印).xlsx"
+Text="D:\\Temp\\DV報價單(依客戶單獨列印)_0226台南\\報價單_0226台南.xlsx"
 
 [EditOutputFolder: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\9\\DOC"
+Text="D:\\Temp\\DV報價單(依客戶單獨列印)_0226台南\\報價單"
 
 [EditSrc: TcxPropertiesStoreComponent]
 =
-Text="D:\\Temp\\9\\4_電訪名單_201807A_下半年保固客戶關懷電訪.xls"
+Text="D:\\Temp\\DV報價單(依客戶單獨列印)_0226台南\\報價單名單_台南場0226.xls"
 

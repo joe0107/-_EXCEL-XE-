@@ -197,7 +197,8 @@ begin
   //置換[指定日期]
   AExcelApp.Cells.Replace('<<指定日期>>', FormatDateTime('YYYY.MM.DD', DateTimePicker_Assign.Date), xlPart, xlByRows, False, False);
   //置換[年月日流水號]
-  aDate := EncodeDate(2018, 10, 15);
+  //aDate := EncodeDate(2018, 10, 15);
+  aDate := DateTimePicker_Assign.Date;
   aText := '''' + FormatDateTime('YYYYMMDD', aDate) + StrPadLeft(IntToStr(FDocNdx), 3, '0');
   AExcelApp.Cells.Replace('<<年月日流水號>>', aText, xlPart, xlByRows, False, False);
   AExcelApp.Cells.Replace('<<今天日期流水號>>', aText, xlPart, xlByRows, False, False);
