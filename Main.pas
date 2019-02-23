@@ -36,6 +36,7 @@ type
     FCol_CustPhone: Integer;
     FCol_CustFax: Integer;
     FCol_TE: Integer;
+    FCol_Area: Integer;
     procedure ClearNdx_XLS_COL;
     procedure ParseNdx_XLS_COL(ASheet: TXLSWorksheet);
   private
@@ -103,6 +104,7 @@ begin
   FCol_CustPhone := -1;
   FCol_CustFax := -1;
   FCol_TE := -1;
+  FCol_Area := -1;
 end;
 
 procedure TfmMain.Exec;
@@ -192,6 +194,8 @@ begin
   MergeData('<<傳真>>', FCol_CustFax);
   //置換[訓練師]
   MergeData('<<訓練師>>', FCol_TE);
+  //置換[訓練師]
+  MergeData('<<轄區>>', FCol_Area);
   //置換[今天日期]
   AExcelApp.Cells.Replace('<<今天日期>>', FormatDateTime('YYYY.MM.DD', Date), xlPart, xlByRows, False, False);
   //置換[指定日期]
@@ -269,6 +273,8 @@ begin
         FCol_CustFax := i
       else if (aText = '訓練師') then
         FCol_TE := i
+      else if (aText = '轄區') then
+        FCol_Area := i
     end;
   end;
 end;
