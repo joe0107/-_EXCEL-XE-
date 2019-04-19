@@ -1,6 +1,11 @@
 program ExcelMerge;
 
 uses
+  madExcept,
+  madLinkDisAsm,
+  madListHardware,
+  madListProcesses,
+  madListModules,
   Forms,
   Main in 'Main.pas' {fmMain};
 

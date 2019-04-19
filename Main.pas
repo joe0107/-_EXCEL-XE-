@@ -4,23 +4,29 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, JcFileUtils, cxClasses,
-  cxShellBrowserDialog, ComCtrls, XLSSheetData5, XLSReadWriteII5, cxPropertiesStore, OleAuto, ExcelXP, JclStrings;
+  cxShellBrowserDialog, ComCtrls, XLSSheetData5, XLSReadWriteII5, cxPropertiesStore, OleAuto, ExcelXP, JclStrings,
+  JcVersionInfo;
 
 type
   TfmMain = class(TForm)
+    cxShellBrowserDialog1: TcxShellBrowserDialog;
+    XLSReadWriteII5: TXLSReadWriteII5;
+    cxPropertiesStore1: TcxPropertiesStore;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    Label1: TLabel;
     EditSrc: TEdit;
     btnSrc: TButton;
     btnDoc: TButton;
     EditDoc: TEdit;
     btnOuput: TButton;
     EditOutputFolder: TEdit;
-    cxShellBrowserDialog1: TcxShellBrowserDialog;
     btnExec: TButton;
     ProgressBar1: TProgressBar;
-    XLSReadWriteII5: TXLSReadWriteII5;
-    cxPropertiesStore1: TcxPropertiesStore;
-    Label1: TLabel;
     DateTimePicker_Assign: TDateTimePicker;
+    ListBox1: TListBox;
+    JcVersionInfo1: TJcVersionInfo;
     procedure btnSrcClick(Sender: TObject);
     procedure btnDocClick(Sender: TObject);
     procedure btnOuputClick(Sender: TObject);
@@ -138,6 +144,8 @@ end;
 
 procedure TfmMain.FormCreate(Sender: TObject);
 begin
+  JcVersionInfo1.FileName := Application.ExeName;
+  Self.Caption := Format('%s V %s', [Self.Caption, JcVersionInfo1.FileVersion]);
   DateTimePicker_Assign.Date := Date;
 end;
 
